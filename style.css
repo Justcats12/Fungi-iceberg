@@ -1,0 +1,88 @@
+body {
+  margin: 10%;
+  font-family: Arial, sans-serif;
+  background-color: #0b0b0b;
+}
+
+h1,
+h2 {
+  color: #333;
+  font-size: 2em;
+  text-align: center;
+}
+h1 {
+  color: #f9f9f9;
+}
+h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.section {
+  border: 1px solid #ccc;
+}
+
+.content-grid {
+  text-align: center;
+  padding: 20px;
+  color: #f9f9f9;
+  font-weight: 800;
+  display: grid;
+  -webkit-text-stroke: 0.5px black;
+  text-stroke: 0.5px black;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.content-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-grid a:hover {
+  color: #f9f9f9b6;
+  text-decoration: none;
+}
+
+.pileus {
+  background-color: hsl(130, 100%, 40%);
+}
+.hymenium {
+  background-color: hsl(130, 100%, 30%);
+}
+.stipe {
+  background-color: hsl(130, 100%, 20%);
+}
+.volva {
+  background-color: hsl(130, 100%, 10%);
+}
+.mycelium {
+  background-color: hsl(130, 100%, 5%);
+}
+
+.grid-article {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  color: #f9f9f9;
+}
+
+.grid-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.grid-article p a {
+  color: #7fff9f;
+  text-decoration: none;
+}
+
+.grid-article p a:hover {
+  color: #7fff9f;
+  text-decoration: underline;
+}
+
+.back-link {
+  color: #f9f9f9;
+}
