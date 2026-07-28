@@ -86,3 +86,18 @@ h2 {
 .back-link {
   color: #f9f9f9;
 }
+@media (orientation: portrait) {
+  .grid-article {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'i' 't';
+  }
+  .grid-article img:first-of-type {
+    grid-area: i;
+  }
+  .grid-article p:first-of-type {
+    grid-area: t;
+  }
+  .content-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
