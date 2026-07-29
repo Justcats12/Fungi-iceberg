@@ -4,34 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Yunnan sudden death syndrome</title>
   </head>
   <body>
-    <h1>Yunnan sudden death syndrome</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        Yunnan is considered the place to go for fungal enthousiasts. A province
-        in the south of China that bears loads of rain troughout the year. The
-        rural villages within this province were mysteriously struck with a
-        series of unexplainable deaths. Within three decades, an estimated 400
-        people died from cardiac arrest. What was even more strange about these
-        series of deaths was that in hours leading up to the death, most victims
-        experienced the same symptoms.
-        <br />
-        <br />
-        Years later, in 2010, scientists pointed the finger at the
-        <a href="https://en.wikipedia.org/wiki/Trogia_venenata"
-          >"little white mushroom"</a
-        >. It contained three toxic amino acids that were the likely cause.
-        However, this didn't explain everything, since an estimated 35 kilograms
-        of this mushroom would be needed to be fatal to humans. It would also be
-        the first fungus to cause heart complications.
-      </p>
-      <image
-        src="https://www.researchgate.net/publication/225054860/figure/fig8/AS:340775528353798@1458258625392/Trogia-venenata-from-Tengchong-County-Yunnan-Province-China-Growing-in-characteristic.png"
-        alt="Placeholder image"
-      />
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Yunnan sudden death syndrome</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            Yunnan is considered the place to go for fungal enthousiasts. A
+            province in the south of China that bears loads of rain troughout
+            the year. The rural villages within this province were mysteriously
+            struck with a series of unexplainable deaths. Within three decades,
+            an estimated 400 people died from cardiac arrest. What was even more
+            strange about these series of deaths was that in hours leading up to
+            the death, most victims experienced the same symptoms.
+            <br />
+            <br />
+            Years later, in 2010, scientists pointed the finger at the
+            <a href="https://en.wikipedia.org/wiki/Trogia_venenata"
+              >"little white mushroom"</a
+            >. It contained three toxic amino acids that were the likely cause.
+            However, this didn't explain everything, since an estimated 35
+            kilograms of this mushroom would be needed to be fatal to humans. It
+            would also be the first fungus to cause heart complications.
+          </p>
+          <image
+            src="https://www.researchgate.net/publication/225054860/figure/fig8/AS:340775528353798@1458258625392/Trogia-venenata-from-Tengchong-County-Yunnan-Province-China-Growing-in-characteristic.png"
+            alt="Placeholder image"
+          />
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

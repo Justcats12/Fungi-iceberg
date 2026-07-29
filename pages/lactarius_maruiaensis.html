@@ -4,38 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Lactarius maruiaensis</title>
   </head>
   <body>
-    <h1>Lactarius maruiaensis</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        The year is 1968 and you're a mycologist from New Zealand. You stumble
-        across a yellow milk cap that looks strange to you. It doesn't look like
-        the safron milk caps that you're used to. You decide to take a sample.
-        To your surprise it's an undescribed new species! You quickly save the
-        sample and send it to a research storage center. It receives the name
-        "Lactarius maruiaensis".
-      </p>
-      <image
-        src="https://redlist.info/assets/uploads/b01f8-lactariusmaruianesis.jpg"
-        alt="Lactarius maruiaensis drawing from https://redlist.info/iucn/species_view/316234"
-      />
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Lactarius maruiaensis</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            The year is 1968 and you're a mycologist from New Zealand. You
+            stumble across a yellow milk cap that looks strange to you. It
+            doesn't look like the safron milk caps that you're used to. You
+            decide to take a sample. To your surprise it's an undescribed new
+            species! You quickly save the sample and send it to a research
+            storage center. It receives the name "Lactarius maruiaensis".
+          </p>
+          <image
+            src="https://redlist.info/assets/uploads/b01f8-lactariusmaruianesis.jpg"
+            alt="Lactarius maruiaensis drawing from https://redlist.info/iucn/species_view/316234"
+          />
 
-      <p>
-        50 years later and nobody has ever seen L. maruiaensis fruit again. It
-        is now considered extinct.
-        <a href="https://en.wikipedia.org/wiki/Ross_McNabb">McNabb</a> being the
-        first and last person to ever make a record of this milk cap. We'll
-        never know enough about it to know why it went extinct, in fact, it
-        might still be alive, hiding deep in the New Zealand woods.
-      </p>
-      <image
-        src="https://www.nzpcn.org.nz/site/assets/files/0/49/697/lactarius-maruiaensis-01.jpg"
-        alt="Lactarius maruiaensis sample"
-      />
-      <p><a href="https://redlist.info/iucn/species_view/316234">Source</a></p>
+          <p>
+            50 years later and nobody has ever seen L. maruiaensis fruit again.
+            It is now considered extinct.
+            <a href="https://en.wikipedia.org/wiki/Ross_McNabb">McNabb</a> being
+            the first and last person to ever make a record of this milk cap.
+            We'll never know enough about it to know why it went extinct, in
+            fact, it might still be alive, hiding deep in the New Zealand woods.
+          </p>
+          <image
+            src="https://www.nzpcn.org.nz/site/assets/files/0/49/697/lactarius-maruiaensis-01.jpg"
+            alt="Lactarius maruiaensis sample"
+          />
+          <p>
+            <a href="https://redlist.info/iucn/species_view/316234">Source</a>
+          </p>
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

@@ -4,47 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Galerina sulciceps</title>
   </head>
   <body>
-    <h1>Galerina sulciceps</h1>
-    <a class="back-link" href="../">← Back</a>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Galerina sulciceps</h1>
+        <a class="back-link" href="../">← Back</a>
 
-    <div class="grid-article">
-      <p>
-        <a href="https://en.wikipedia.org/wiki/Galerina_sulciceps"
-          >Galerina sulciceps</a
-        >
-        is an especially poisonous mushroom, dubbed to be the "most poisonous
-        mushroom known to man". Concentrations of
-        <a href="https://en.wikipedia.org/wiki/Amatoxin">amatoxin</a> and
-        possibly other toxins being so high that death occurs within three days,
-        as opposed to destroying angels which can take up to a week to be fatal.
-        The symptoms are also not consisten with those of other
-        amatoxin-carrying mushrooms, described as "pins and needles".
-        <br />
-        <br />
-        <a href="https://en.wikipedia.org/wiki/Galerina_marginata#"
-          >G. marginata</a
-        >, A similar species that grows in most places in the wolrd, shows
-        symptoms more similar to those of the death cap. What these mushrooms do
-        have in common is that, unlike the death cap, they can both be
-        cultivated. For G. sulciceps this often happens accidentally within
-        greenhouses. Because of this it has received the nickname "Greenhouse
-        galerina". Outside of greenhouses it is found in tropical climates,
-        mostly in Indonesia.
-      </p>
-      <image
-        src="https://inaturalist-open-data.s3.amazonaws.com/photos/332268907/large.jpg"
-        alt="Image of G. sulciceps by Graham Steinruck"
-      />
-      <p></p>
-      <p>
-        (Image by Graham Steinruck,
-        <a href="https://creativecommons.org/licenses/by-nc/4.0/"
-          >Some rights reserved</a
-        >)
-      </p>
+        <div class="grid-article">
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Galerina_sulciceps"
+              >Galerina sulciceps</a
+            >
+            is an especially poisonous mushroom, dubbed to be the "most
+            poisonous mushroom known to man". Concentrations of
+            <a href="https://en.wikipedia.org/wiki/Amatoxin">amatoxin</a> and
+            possibly other toxins being so high that death occurs within three
+            days, as opposed to destroying angels which can take up to a week to
+            be fatal. The symptoms are also not consisten with those of other
+            amatoxin-carrying mushrooms, described as "pins and needles".
+            <br />
+            <br />
+            <a href="https://en.wikipedia.org/wiki/Galerina_marginata#"
+              >G. marginata</a
+            >, A similar species that grows in most places in the wolrd, shows
+            symptoms more similar to those of the death cap. What these
+            mushrooms do have in common is that, unlike the death cap, they can
+            both be cultivated. For G. sulciceps this often happens accidentally
+            within greenhouses. Because of this it has received the nickname
+            "Greenhouse galerina". Outside of greenhouses it is found in
+            tropical climates, mostly in Indonesia.
+          </p>
+          <image
+            src="https://inaturalist-open-data.s3.amazonaws.com/photos/332268907/large.jpg"
+            alt="Image of G. sulciceps by Graham Steinruck"
+          />
+          <p></p>
+          <p>
+            (Image by Graham Steinruck,
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+              >Some rights reserved</a
+            >)
+          </p>
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

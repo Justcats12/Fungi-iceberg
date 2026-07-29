@@ -4,49 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>The pezica</title>
   </head>
   <body>
-    <h1>The pezica</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        Pliny the elder was a Roman writer dedicating his life to writing down
-        all knowledge at the time. While he writes a bunch of stuff that didn't
-        turn out to be true, he also writes a lot of surprisingly correct facts.
-        For example, about fungi he can correctly say that specimens growing
-        close to metals become toxic. But a few sentences later he says the same
-        about mushrooms growing near the hole of a snake. These are not the only
-        'facts' he writes about fungi. In fact he dedicates a
-        <a
-          href="https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D19%3Achapter%3D14"
-          >very short chapter</a
-        >
-        to a mushroom the greeks called "pezica".
-        <br />
-        <br />
-        The only thing he describes the pezica as is a mushroom that grows
-        without a stalk. It's importance to the greeks could suggest that it's
-        an edible species, such as a puffball or a jelly ear. Some even think
-        that it's a
-        <a href="https://en.wikipedia.org/wiki/Morchella_esculenta">morel</a>.
-        Whatever the species, with this vague of a description we'll likely
-        never know unless the name pops up in an earlier greek source.
-        <br />
-        <br />
-        Funnily enough, researchers took it upon themselves to create the pezica
-        themselves. In 2020 named a new species of bovista after it.
-        <a
-          href="https://www.researchgate.net/profile/Francisco-Kuhar/publication/343323579_Bovista_pezica_Basidiomycota_Agaricales_-_A_new_species_with_unusually_ornamented_capillitium_from_Patagonia_Argentina/links/65285235f5ca2157857124ac/Bovista-pezica-Basidiomycota-Agaricales-A-new-species-with-unusually-ornamented-capillitium-from-Patagonia-Argentina.pdf"
-          >Bovista pezica</a
-        >
-        is an Argentinian species, so it can't be the one described by the Roman
-        researcher.
-      </p>
-      <image
-        src="https://rewild.org/uploads/2025/01/Bovista_pezica__Luciana_Herna__ndez_Caffot_.jpeg?format=auto&optimize=high&width=1920"
-        alt="Placeholder image"
-      />
+    <div id="treeContainer">
+      <div class="container">
+        <h1>The pezica</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            Pliny the elder was a Roman writer dedicating his life to writing
+            down all knowledge at the time. While he writes a bunch of stuff
+            that didn't turn out to be true, he also writes a lot of
+            surprisingly correct facts. For example, about fungi he can
+            correctly say that specimens growing close to metals become toxic.
+            But a few sentences later he says the same about mushrooms growing
+            near the hole of a snake. These are not the only 'facts' he writes
+            about fungi. In fact he dedicates a
+            <a
+              href="https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D19%3Achapter%3D14"
+              >very short chapter</a
+            >
+            to a mushroom the greeks called "pezica".
+            <br />
+            <br />
+            The only thing he describes the pezica as is a mushroom that grows
+            without a stalk. It's importance to the greeks could suggest that
+            it's an edible species, such as a puffball or a jelly ear. Some even
+            think that it's a
+            <a href="https://en.wikipedia.org/wiki/Morchella_esculenta">morel</a
+            >. Whatever the species, with this vague of a description we'll
+            likely never know unless the name pops up in an earlier greek
+            source.
+            <br />
+            <br />
+            Funnily enough, researchers took it upon themselves to create the
+            pezica themselves. In 2020 named a new species of bovista after it.
+            <a
+              href="https://www.researchgate.net/profile/Francisco-Kuhar/publication/343323579_Bovista_pezica_Basidiomycota_Agaricales_-_A_new_species_with_unusually_ornamented_capillitium_from_Patagonia_Argentina/links/65285235f5ca2157857124ac/Bovista-pezica-Basidiomycota-Agaricales-A-new-species-with-unusually-ornamented-capillitium-from-Patagonia-Argentina.pdf"
+              >Bovista pezica</a
+            >
+            is an Argentinian species, so it can't be the one described by the
+            Roman researcher.
+          </p>
+          <image
+            src="https://rewild.org/uploads/2025/01/Bovista_pezica__Luciana_Herna__ndez_Caffot_.jpeg?format=auto&optimize=high&width=1920"
+            alt="Placeholder image"
+          />
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

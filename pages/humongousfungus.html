@@ -4,33 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Humongous fungus</title>
   </head>
   <body>
-    <h1>Humongous fungus</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        In Oregon's Malheur National forest there lies a secret under the soil.
-        A specimien of
-        <a href="https://en.wikipedia.org/wiki/Armillaria_ostoyae"
-          >Armillaria ostoyae</a
-        >
-        that is so large it might be the largest organism on the planet. It
-        covers 9 square kilometers of the soil with its mycelium network.
-        Weighing over 30000 metric tonnes, it may also be the heaviest.
-        <br />
-        <br />
-        It must have taken years for this parasite to spread out this far, which
-        could in turn make it over 3000 years old. Meaning this single organism
-        has seen generations upon generations of human civilization, possibly
-        harvesting its fruiting bodies. A. ostoyae is an edible species and has
-        no doubt fed some humans during its lifespan.
-      </p>
-      <image
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Armillaria_ostoyae.jpg/500px-Armillaria_ostoyae.jpg"
-        alt="Placeholder image"
-      />
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Humongous fungus</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            In Oregon's Malheur National forest there lies a secret under the
+            soil. A specimien of
+            <a href="https://en.wikipedia.org/wiki/Armillaria_ostoyae"
+              >Armillaria ostoyae</a
+            >
+            that is so large it might be the largest organism on the planet. It
+            covers 9 square kilometers of the soil with its mycelium network.
+            Weighing over 30000 metric tonnes, it may also be the heaviest.
+            <br />
+            <br />
+            It must have taken years for this parasite to spread out this far,
+            which could in turn make it over 3000 years old. Meaning this single
+            organism has seen generations upon generations of human
+            civilization, possibly harvesting its fruiting bodies. A. ostoyae is
+            an edible species and has no doubt fed some humans during its
+            lifespan.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Armillaria_ostoyae.jpg/500px-Armillaria_ostoyae.jpg"
+            alt="Placeholder image"
+          />
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

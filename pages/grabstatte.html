@@ -4,51 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Die Grabstätte der pilzvergifteten Kinder</title>
   </head>
   <body>
-    <h1>Die Grabstätte der pilzvergifteten Kinder</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        This story is probably the most tragic mushroom related story, which has
-        barely been reported on in mainstream media. On 8 September 1918 a class
-        of young boys, aged 7 to 14 years old, stumbled onto a patch of
-        mushrooms while walking to school from church. Hungry and excited with
-        this discovery, they took the mushrooms to their school cook, who made
-        the mistake of assuming the mushrooms were safe to eat based on a taste
-        test. Afterwards she prepared a dish for 33<sup>1</sup>
-        schoolboys. That night some of the boys started to throw up revealing
-        the true nature of what they had eaten. Over the course of the next week
-        they died one by one in the local hospital. In total, 31 students died
-        of mushroom poisoning, only two of the boys having survived.
-        <br />
-        <br />
-        The likely culprit is the
-        <a href="https://en.wikipedia.org/wiki/Amanita_phalloides">death cap</a>
-        since it is common all across europe. Moreover, it cannot be identified
-        as deadly with a taste test.
-        <br />
-        <br />
-        Two years later, in 1920, a memorial was built for them at the local
-        cemetery.
-        <br />
-        <br />
-        <br />
-        <br />
-        <sup>1</sup>The official papers at the time claim 34 children had eaten
-        the dish, but later sources state 33.
-      </p>
-      <image
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Castrop-Rauxel%2C_Denkmal_f%C3%BCr_die_pilzvergifteten_Kinder.jpg/1920px-Castrop-Rauxel%2C_Denkmal_f%C3%BCr_die_pilzvergifteten_Kinder.jpg"
-        alt="Placeholder image"
-      />
-      <p>
-        <a
-          href="https://www.pv-castrop-rauxel-sued.de/medium/2013-Sternenkinder_KuH_WiKu.pdf?m=177497"
-          >Source (pdf)</a
-        >
-      </p>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Die Grabstätte der pilzvergifteten Kinder</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            This story is probably the most tragic mushroom related story, which
+            has barely been reported on in mainstream media. On 8 September 1918
+            a class of young boys, aged 7 to 14 years old, stumbled onto a patch
+            of mushrooms while walking to school from church. Hungry and excited
+            with this discovery, they took the mushrooms to their school cook,
+            who made the mistake of assuming the mushrooms were safe to eat
+            based on a taste test. Afterwards she prepared a dish for 33<sup
+              >1</sup
+            >
+            schoolboys. That night some of the boys started to throw up
+            revealing the true nature of what they had eaten. Over the course of
+            the next week they died one by one in the local hospital. In total,
+            31 students died of mushroom poisoning, only two of the boys having
+            survived.
+            <br />
+            <br />
+            The likely culprit is the
+            <a href="https://en.wikipedia.org/wiki/Amanita_phalloides"
+              >death cap</a
+            >
+            since it is common all across europe. Moreover, it cannot be
+            identified as deadly with a taste test.
+            <br />
+            <br />
+            Two years later, in 1920, a memorial was built for them at the local
+            cemetery.
+            <br />
+            <br />
+            <br />
+            <br />
+            <sup>1</sup>The official papers at the time claim 34 children had
+            eaten the dish, but later sources state 33.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Castrop-Rauxel%2C_Denkmal_f%C3%BCr_die_pilzvergifteten_Kinder.jpg/1920px-Castrop-Rauxel%2C_Denkmal_f%C3%BCr_die_pilzvergifteten_Kinder.jpg"
+            alt="Placeholder image"
+          />
+          <p>
+            <a
+              href="https://www.pv-castrop-rauxel-sued.de/medium/2013-Sternenkinder_KuH_WiKu.pdf?m=177497"
+              >Source (pdf)</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

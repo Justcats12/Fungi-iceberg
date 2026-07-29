@@ -4,41 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>2023 Death cap murders</title>
   </head>
   <body>
-    <h1>2023 Death cap murders</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        On 29 July 2023, Erin Patterson had prepared beef wellington with
-        mushroom sauce for her relatives. Of the four visitors only one would
-        survive. Patterson had chosen a quite unique weapon for this murder,
-        because she had a sinister plan to get away with it. She had put pieces
-        of
-        <a href="https://en.wikipedia.org/wiki/Amanita_phalloides">death cap</a>
-        in the sauce. She would have gotten away with it if weren't for Ian
-        Wilkinson, the husband of her in-law's sister, who survived after a long
-        struggle in the hospital. After getting arrested, she tried to play the
-        excuse that she had bought them from an asian store and that there was a
-        disasterous mixup. Other than the surviving key witness, the police had
-        found a freeze-drying machine that Patterson had disposed of. Initially
-        she lied about ever owning it, but later confessed that was a lie in
-        court. The prosecution accused her of using this machine to turn the
-        death caps into powder and putting it in the sauce.
-        <br />
-        <br />
-        She now serves three life sentences in prison.
-        <br />
-        <br />
-        The most interesting part about this story is that it's the only of it's
-        kind in recent history. Perhaps the death cap is a rare method, or maybe
-        those who use it tend to get away with it.
-      </p>
-      <image
-        src="https://upload.wikimedia.org/wikipedia/commons/4/40/Photo_of_three_Amanita_phalloides_%28Death_Cap%29.jpg"
-        alt="Death caps"
-      />
+    <div id="treeContainer">
+      <div class="container">
+        <h1>2023 Death cap murders</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            On 29 July 2023, Erin Patterson had prepared beef wellington with
+            mushroom sauce for her relatives. Of the four visitors only one
+            would survive. Patterson had chosen a quite unique weapon for this
+            murder, because she had a sinister plan to get away with it. She had
+            put pieces of
+            <a href="https://en.wikipedia.org/wiki/Amanita_phalloides"
+              >death cap</a
+            >
+            in the sauce. She would have gotten away with it if weren't for Ian
+            Wilkinson, the husband of her in-law's sister, who survived after a
+            long struggle in the hospital. After getting arrested, she tried to
+            play the excuse that she had bought them from an asian store and
+            that there was a disasterous mixup. Other than the surviving key
+            witness, the police had found a freeze-drying machine that Patterson
+            had disposed of. Initially she lied about ever owning it, but later
+            confessed that was a lie in court. The prosecution accused her of
+            using this machine to turn the death caps into powder and putting it
+            in the sauce.
+            <br />
+            <br />
+            She now serves three life sentences in prison.
+            <br />
+            <br />
+            The most interesting part about this story is that it's the only of
+            it's kind in recent history. Perhaps the death cap is a rare method,
+            or maybe those who use it tend to get away with it.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/4/40/Photo_of_three_Amanita_phalloides_%28Death_Cap%29.jpg"
+            alt="Death caps"
+          />
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

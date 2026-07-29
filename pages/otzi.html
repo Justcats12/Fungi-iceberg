@@ -4,35 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Ötzi the Iceman</title>
   </head>
   <body>
-    <h1>Ötzi the Iceman</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        <a href="https://simple.wikipedia.org/wiki/%C3%96tzi_the_Iceman"
-          >Ötzi</a
-        >
-        was a prehistoric natural mummy of a man who lived over 5000 years ago.
-        He was shot with an arrow and died, after which he was covered in ice
-        and found again in 1991, well preserved.
-        <br />
-        <br />
-        Ötzi was carying
-        <a href="https://en.wikipedia.org/wiki/Fomes_fomentarius"
-          >Tinder mushrooms</a
-        >, which he likely used to start fires. He also carried
-        <a href="https://en.wikipedia.org/wiki/Fomitopsis_betulina"
-          >Birch polypore</a
-        >, likely to be used as a medicine. This shows that the medicinal
-        properties of fungi were understood way before the discovery of
-        penicilin.
-      </p>
-      <image
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ricostruzione_di_%C3%96tzi.jpg/500px-Ricostruzione_di_%C3%96tzi.jpg"
-        alt="A reconstruction of Ötzi"
-      />
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Ötzi the Iceman</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            <a href="https://simple.wikipedia.org/wiki/%C3%96tzi_the_Iceman"
+              >Ötzi</a
+            >
+            was a prehistoric natural mummy of a man who lived over 5000 years
+            ago. He was shot with an arrow and died, after which he was covered
+            in ice and found again in 1991, well preserved.
+            <br />
+            <br />
+            Ötzi was carying
+            <a href="https://en.wikipedia.org/wiki/Fomes_fomentarius"
+              >Tinder mushrooms</a
+            >, which he likely used to start fires. He also carried
+            <a href="https://en.wikipedia.org/wiki/Fomitopsis_betulina"
+              >Birch polypore</a
+            >, likely to be used as a medicine. This shows that the medicinal
+            properties of fungi were understood way before the discovery of
+            penicilin.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ricostruzione_di_%C3%96tzi.jpg/500px-Ricostruzione_di_%C3%96tzi.jpg"
+            alt="A reconstruction of Ötzi"
+          />
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

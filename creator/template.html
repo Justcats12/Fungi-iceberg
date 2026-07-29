@@ -4,14 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
+
     <title>Title</title>
   </head>
   <body>
-    <h1>Title</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>Text</p>
-      <image src="./fanart01.png" alt="Placeholder image" />
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Title</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>Text</p>
+          <image src="./fanart01.png" alt="Placeholder image" />
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

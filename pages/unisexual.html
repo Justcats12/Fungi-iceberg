@@ -4,50 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Unisexual death caps</title>
   </head>
   <body>
-    <h1>Unisexual death caps</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        The
-        <a href="https://en.wikipedia.org/wiki/Amanita_phalloides">death cap</a>
-        is invasive in many parts of the world, such as America and Australia.
-        Because of this rapid spread, researchers in California decided to take
-        a closer look at this deadly mushroom.
-        <br />
-        <br />
-        To simplify the sexual reproduction of Fungi similar to the death cap,
-        you need two desitinct induviduals to create a mushroom. Two spores that
-        reach out to each other in the form of
-        <a href="https://en.wikipedia.org/wiki/Mycelium">mycelium</a>, then fuse
-        into one ready to sexually reproduce. This is what fungi like the death
-        cap and
-        <a href="https://en.wikipedia.org/wiki/Amanita_muscaria">fly agaric</a>
-        need to do for creating offspring.
-        <br />
-        <br />
-        What researchers discovered is that this romantic two-spore story
-        doesn't have to be true, at least in Amanita phalloides (death cap).
-        This fungus is capable of having a singular spore reach out to itself in
-        what I can only assume is a mycelium loop. After which it is perfectly
-        capable of reproducting with itself, basically cloning itself via
-        fruiting body. This behaviour has only been witnessed in Californian
-        invasive specimen, and it's unclear weither european death caps do this
-        too. They are the same species so one can only assume.
-        <br />
-        <br />
-        So in short, the death cap can spread so rapidly across new areas
-        because it can create spores without needing a partner.
-      </p>
-      <image
-        src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Death_Cap_Mushroom.jpg"
-        alt="Warning sign against death caps"
-      />
-      <p>
-        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10598064/">Source</a>
-      </p>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Unisexual death caps</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            The
+            <a href="https://en.wikipedia.org/wiki/Amanita_phalloides"
+              >death cap</a
+            >
+            is invasive in many parts of the world, such as America and
+            Australia. Because of this rapid spread, researchers in California
+            decided to take a closer look at this deadly mushroom.
+            <br />
+            <br />
+            To simplify the sexual reproduction of Fungi similar to the death
+            cap, you need two desitinct induviduals to create a mushroom. Two
+            spores that reach out to each other in the form of
+            <a href="https://en.wikipedia.org/wiki/Mycelium">mycelium</a>, then
+            fuse into one ready to sexually reproduce. This is what fungi like
+            the death cap and
+            <a href="https://en.wikipedia.org/wiki/Amanita_muscaria"
+              >fly agaric</a
+            >
+            need to do for creating offspring.
+            <br />
+            <br />
+            What researchers discovered is that this romantic two-spore story
+            doesn't have to be true, at least in Amanita phalloides (death cap).
+            This fungus is capable of having a singular spore reach out to
+            itself in what I can only assume is a mycelium loop. After which it
+            is perfectly capable of reproducting with itself, basically cloning
+            itself via fruiting body. This behaviour has only been witnessed in
+            Californian invasive specimen, and it's unclear weither european
+            death caps do this too. They are the same species so one can only
+            assume.
+            <br />
+            <br />
+            So in short, the death cap can spread so rapidly across new areas
+            because it can create spores without needing a partner.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Death_Cap_Mushroom.jpg"
+            alt="Warning sign against death caps"
+          />
+          <p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10598064/"
+              >Source</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>

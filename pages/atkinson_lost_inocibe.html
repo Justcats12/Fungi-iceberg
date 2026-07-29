@@ -4,45 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
     <title>Atkinson's lost Inocibe</title>
   </head>
   <body>
-    <h1>Atkinson's lost Inocibe</h1>
-    <a class="back-link" href="../">← Back</a>
-    <div class="grid-article">
-      <p>
-        <a href="https://en.wikipedia.org/wiki/George_Francis_Atkinson"
-          >George F. Atkinson</a
-        >
-        was an American botanist and mycologist who discovered many new species.
-        One of these was Inocybe olpidiocystis, a lawn mushroom which he found
-        in 1902. After Atkinson's death in 1918, the species was published
-        formally by a friend.
-        <br />
-        <br />
-        Since that day in 1902 nobody has ever found a fruiting body of I.
-        olpidiocystis again. That's why it's nicknamed "Atkinson's lost
-        Inocibe".
-        <br />
-        <br />
-        There was hope in 1985, when a
-        <a
-          href="https://openlibrary.org/books/OL3180916M/A_field_guide_to_southern_mushrooms"
-          >field guide</a
-        >
-        contained a picture of the Inocibe, but there is no evidence to confirm
-        this is truly I. olpidiocystis.
-      </p>
-      <image
-        src="https://blog.mycology.cornell.edu/files/2013/01/CUP-A-013745-drawing-sm-1fxypti-287x352.jpg"
-        alt="Drawings of the lost inocibe"
-      />
-      <p>
-        <a
-          href="https://blog.mycology.cornell.edu/2013/01/09/atkinsons-lost-inocybe/"
-          >Source</a
-        >
-      </p>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Atkinson's lost Inocibe</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            <a href="https://en.wikipedia.org/wiki/George_Francis_Atkinson"
+              >George F. Atkinson</a
+            >
+            was an American botanist and mycologist who discovered many new
+            species. One of these was Inocybe olpidiocystis, a lawn mushroom
+            which he found in 1902. After Atkinson's death in 1918, the species
+            was published formally by a friend.
+            <br />
+            <br />
+            Since that day in 1902 nobody has ever found a fruiting body of I.
+            olpidiocystis again. That's why it's nicknamed "Atkinson's lost
+            Inocibe".
+            <br />
+            <br />
+            There was hope in 1985, when a
+            <a
+              href="https://openlibrary.org/books/OL3180916M/A_field_guide_to_southern_mushrooms"
+              >field guide</a
+            >
+            contained a picture of the Inocibe, but there is no evidence to
+            confirm this is truly I. olpidiocystis.
+          </p>
+          <image
+            src="https://blog.mycology.cornell.edu/files/2013/01/CUP-A-013745-drawing-sm-1fxypti-287x352.jpg"
+            alt="Drawings of the lost inocibe"
+          />
+          <p>
+            <a
+              href="https://blog.mycology.cornell.edu/2013/01/09/atkinsons-lost-inocybe/"
+              >Source</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 1,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
   </body>
 </html>
