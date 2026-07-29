@@ -36,6 +36,7 @@ h2 {
 .content-grid a {
   text-decoration: none;
   color: inherit;
+  margin: 5px;
 }
 
 .content-grid a:hover {
