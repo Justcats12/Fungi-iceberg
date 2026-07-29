@@ -87,6 +87,11 @@ h2 {
 .back-link {
   color: #f9f9f9;
 }
+
+.rabbit {
+  font-family: monospace;
+}
+
 @media (orientation: portrait) {
   .grid-article {
     grid-template-columns: 1fr;
