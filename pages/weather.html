@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
+
+    <title>Fungi control the weather</title>
+  </head>
+  <body>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Fungi control the weather</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            There is evidence that suggests fungal spores help form large
+            droplets in clouds, which could lead to rainfall. This basically
+            means fungi can cause it to rain, not only for their own benefit but
+            to help their hosts and future hosts stay healthy and grow.
+            <br />
+            <br />
+            Fungi having a role in the weather does not only affect mushrooms,
+            but the entirety of nature. It gives them more significance in
+            creating more sustainable ecosystems.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/03_01_04_discharge_of_ballistospore_%28M._Piepenbring%29.png/1920px-03_01_04_discharge_of_ballistospore_%28M._Piepenbring%29.png"
+            alt="Discharge of a basidiospore"
+          />
+          <p>
+            <a
+              href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4624964/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 10,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
+  </body>
+</html>
