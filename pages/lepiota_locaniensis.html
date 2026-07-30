@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
+
+    <title>Lepiota locaniensis</title>
+  </head>
+  <body>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Lepiota locaniensis</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            Lepiota locaniensis was first reported in 1935 as a new Chilean
+            fungus. Mycologists kept finding the L. locaniensis untill 1946,
+            having kept note of the locations it would typically grow in.
+            Between 1964 and 1975 attempts were made to find it again, to no
+            success. Since it is a poisonous species, researches tried to find
+            the fungus in medical records of mushroom poisonings, but no record
+            of the mushroom had been found there either.
+            <br />
+            <br />
+            In 1994 Simonetti and Lazo published a paper announcing L.
+            locaniensis was formally presumed extinct. The reason for it's
+            dissapearance is unknown.
+          </p>
+          <image
+            src="./img/extinctfunguslepiotalocaniensis .png"
+            alt="A drawing of lepiota locaniensis"
+          />
+          <p>
+            <a
+              href="https://rchn.biologiachile.cl/pdfs/1994/3/Simonetti_&_Lazo_1994.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 10,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
+  </body>
+</html>
