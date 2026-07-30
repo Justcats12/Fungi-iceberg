@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
+
+    <title>Salem witch trials</title>
+  </head>
+  <body>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Salem witch trials</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            Between 1692 and 1693 there were a series of witch trials
+            Massachusetts. The trials have been dubbed the
+            <a
+              target="_blank"
+              href="https://simple.wikipedia.org/wiki/Salem_Witch_Trials"
+              >Salem Witch Trials</a
+            >. During these, 200 people had been accused of witchcraft of which
+            150 were jailed and 20 more executed.
+            <br />
+            <br />
+            While it's unclear what factors played what role in the mass
+            hysteria of the witch trials, one contributing factors might have
+            been
+            <a
+              href="https://en.wikipedia.org/wiki/Ergot"
+              target="_blank"
+              rel="noopener noreferrer"
+              >ergot</a
+            >. This is a fungal infection mainly targetting rye, which can turn
+            it toxic when consumed. The symptoms include hallucinations and
+            painful spasms, which could explain some behaviours of people during
+            the trials.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Captain_Alden_Denounced.jpg"
+            alt="Captain Alden Denounced, Depiction of Capt. John Alden, Jr. denounced as a witch during the Salem Witch Trials"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 10,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
+  </body>
+</html>

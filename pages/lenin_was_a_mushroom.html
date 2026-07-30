@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
+
+    <title>Lenin was a mushroom</title>
+  </head>
+  <body>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Lenin was a mushroom</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            In may of 1991 Leningrad television televised a hoax that
+            <a
+              href="https://en.wikipedia.org/wiki/Vladimir_Lenin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Vladimir Lenin</a
+            >
+            was a mushroom.
+            <br />
+            <br />
+            The story told by Kuryokhin, who impersonates a historian, goes that
+            Lenin consumed so many psychedelic mushrooms that he himself turned
+            into a mushroom and a radio wave.
+            <br />
+            <br />
+            The hoax was a parody on theories about the death of
+            <a
+              href="https://en.wikipedia.org/wiki/Sergei_Yesenin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sergei Yesenin</a
+            >, which one television host claimed was murdered.
+          </p>
+          <image
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Iljitsj_Oeljanov_Lenin%2C_de_Russische_revolutionair_en_communistische_%28partij%29_leider_van_de%2C_SFA001006857.jpg/1920px-Iljitsj_Oeljanov_Lenin%2C_de_Russische_revolutionair_en_communistische_%28partij%29_leider_van_de%2C_SFA001006857.jpg"
+            alt="Placeholder image"
+          />
+          <p></p>
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/h2cs8QLnxlU?si=7-dTrdLp-q_n9GLV"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 10,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
+  </body>
+</html>
