@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
+
+    <title>Penicillium verrucosum</title>
+  </head>
+  <body>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>Penicillium verrucosum</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            If your bread reaks of soil or has green spots,
+            <a
+              href="https://en.wikipedia.org/wiki/Penicillium_verrucosum"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Penicillium verrucosum</a
+            >
+            might be the cause. This mold is in the same family as molds used in
+            cheese, as well as molds that create penicilin. However, P.
+            verrucosum is not suitable for consumption or medicinal purposes. P.
+            verrucosum contains an active compound called Ochratoxin A, which
+            can mutate cells, causing cancer. It has also been suspected to
+            cause Alzheimer's and Parkinson's disease.
+            <br />
+            <br />
+            Being a grain saprobe, it can also end up in animal food. This can
+            be concerning because it may end up in pig food, which could leave
+            significant amounts of the toxin in their fat.
+            <br />
+            <br />
+            Other than Ochratoxin A P. verrucosum also contains citrinin, which
+            can damage the kindeys.
+          </p>
+          <image
+            src="https://www.researchgate.net/profile/Gsangeetha-Vani/publication/368992909/figure/fig2/AS:11431281124533902@1677977144442/Penicillium-verrucosum-on-DG18-medium.png"
+            alt="Placeholder image"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 10,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
+  </body>
+</html>

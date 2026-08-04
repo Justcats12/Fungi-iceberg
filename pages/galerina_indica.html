@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../tree.js"></script>
+
+    <title>The dark magic mushroom</title>
+  </head>
+  <body>
+    <div id="treeContainer">
+      <div class="container">
+        <h1>The dark magic mushroom</h1>
+        <a class="back-link" href="../">← Back</a>
+        <div class="grid-article">
+          <p>
+            The fungal kingdom is known mainly for two kinds of toxins. First of
+            all, the kind that destroys cells and kills you in the span of a
+            week. Secondly, the kind that expands your mind. The most known
+            amongst these are
+            <a
+              href="https://en.wikipedia.org/wiki/Amatoxin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >amatixins</a
+            >
+            and
+            <a
+              href="https://en.wikipedia.org/wiki/Psilocybin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >psilocybin</a
+            >.
+            <br />
+            <br />
+            Due to horizontal gene transfer, which refers to the transfer of
+            genetic material without traditional reproduction, a species has
+            appeared which has both amatoxins and psilocybin.
+            <a
+              href="en.wikipedia.org/wiki/Galerina"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Galerina</a
+            >
+            indica, discovered in 2014 has been shown to contain both of these
+            compounds in
+            <a
+              href="https://www.biorxiv.org/content/10.64898/2026.07.17.739257v1"
+              target="_blank"
+              rel="noopener noreferrer"
+              >a recent study by Kunik A. et al</a
+            >. The fungus has been dubbed "the dark magic mushroom" for this
+            reason.
+          </p>
+          <image
+            src="https://inaturalist-open-data.s3.amazonaws.com/photos/517431662/large.jpg"
+            alt="Placeholder image"
+          />
+          <p></p>
+          <p>
+            Scott Ostuni
+            <a
+              href="https://creativecommons.org/licenses/by-nc/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Some rights reserved</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById('treeContainer');
+      const tree = new TreePlugin({
+        container: container,
+        depth: 1000,
+        growthSpeed: 10,
+        treeScale: -2,
+        branchWidth: 0.5,
+        colorMode: 'solid',
+        color: '#fff',
+        seed: Math.floor(Math.random() * 100000),
+      });
+    </script>
+  </body>
+</html>
